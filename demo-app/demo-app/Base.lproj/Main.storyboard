@@ -123,7 +123,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxS-B9-jFi" customClass="borderBtn" customModule="demo_app" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxS-B9-jFi" customClass="borderBtn" customModule="demo_app" customModuleProvider="target">
                                 <rect key="frame" x="27" y="502" width="266" height="46"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39586900679999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -150,6 +150,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mensClicked:" destination="X6r-4S-IwG" eventType="touchUpInside" id="eXz-ds-Zk7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj6-Ab-o20" customClass="borderBtn" customModule="demo_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="63" width="280" height="46"/>
@@ -161,6 +164,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="womensClicked:" destination="X6r-4S-IwG" eventType="touchUpInside" id="jjz-HR-f68"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix3-eu-PzC" customClass="borderBtn" customModule="demo_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="126" width="280" height="46"/>
@@ -172,6 +178,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="coedClicked:" destination="X6r-4S-IwG" eventType="touchUpInside" id="J9d-kP-oSd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -208,6 +217,7 @@
                         <viewLayoutGuide key="safeArea" id="XZV-On-bbb"/>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="IxS-B9-jFi" id="4fW-eV-YEP"/>
                         <segue destination="dna-E4-WJR" kind="show" identifier="skillVC" id="puC-Fh-LrV"/>
                     </connections>
                 </viewController>
